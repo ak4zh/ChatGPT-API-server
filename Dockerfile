@@ -14,4 +14,4 @@ COPY --from=build /go/bin/ChatGPT-API-server /usr/local/bin/
 
 RUN apk add --no-cache curl
 ENV API_KEY  ${API_KEY}
-CMD "ChatGPT-API-server", "8080", API_KEY, "-listen", "0.0.0.0"
+CMD ChatGPT-API-server 8080 API_KEY -listen 0.0.0.0
